@@ -60,18 +60,9 @@ def process_image_and_find_path(img, start=None, goal=None):
     na_outputs = neural_astar(dilated_map.unsqueeze(0).to(device), start_map.to(device), goal_map.to(device), store_intermediate_results=True)
     na_outputs[-1][-1]['paths'][0] = (1 - na_outputs[-1][-1]['paths'][0])
     path = F.resize(na_outputs[-1][-1]['paths'][0], (640, 640))
-    # print(torch.unique(path))
     path_np = path.permute(1, 2, 0).cpu().detach().numpy()
-    
     path_np = np.clip(path_np * 255, 0, 255).astype(np.uint8)
-    # print(np.uni)
-    # path_overlay = np.zeros_like(img_resized)
-    # path_overlay[..., 0] = path_np[..., 0] 
-    # path_overlay[..., 1] = 0  
-    # path_overlay[..., 2] = 0  
-
     alpha = 0.6 
-    # blended_img = cv2.addWeighted(img_resized, 1, path_overlay, alpha, 0)
     blended_img = (img_resized*alpha) + (path_np*(1-alpha))
     return blended_img, start, goal
 
