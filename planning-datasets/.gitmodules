@@ -1,3 +1,0 @@
-[submodule "data/mpd/original"]
-	path = data/mpd/original
-	url = https://github.com/mohakbhardwaj/motion_planning_datasets
