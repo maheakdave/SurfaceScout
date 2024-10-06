@@ -89,5 +89,5 @@ async def pathfinding(file: UploadFile = File(...), x_start: int = Form(None), y
 
     return {"start": valid_start, "goal": valid_goal, "path": result_image}
 
-# if __name__ == '__main__':
-#     uvicorn.run(app, port=8000)
+if __name__ == '__main__':
+    uvicorn.run(app, port=8000)
