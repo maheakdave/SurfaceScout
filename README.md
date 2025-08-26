@@ -8,6 +8,6 @@ Run the api server using -> `python api.py` and then run the streamlit app by ru
 
 Below are few screenshots of the app. 
 
-![App screen](assets\appscr.png)
+![App screen](assets/appscr.png)
 
-![Rover path output](assets\output1.png)
+![Rover path output](assets/output1.png)
