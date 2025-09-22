@@ -16,7 +16,7 @@ app = FastAPI()
 device = "cpu"
 yolo_model = YOLO("best.pt")
 neural_astar = NeuralAstar(encoder_arch='CNN').to(device)
-neural_astar.load_state_dict(load_from_ptl_checkpoint("D:\\isro_hack\\model\\mazes_032_moore_c8\\lightning_logs\\version_0\\checkpoints\\"))
+neural_astar.load_state_dict(load_from_ptl_checkpoint("model\\mazes_032_moore_c8\\lightning_logs\\version_0\\checkpoints\\"))
 neural_astar.eval()
 
 def process_image_and_find_path(img, start=None, goal=None):
