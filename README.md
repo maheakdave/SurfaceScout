@@ -6,7 +6,7 @@ Install python dependencies by running -> `pip install -r requirements.txt`.
 
 Run the api server using -> `python api.py` and then run the streamlit app by running -> `python -m streamlit run stapp.py`.
 
-- Image upload -> crater-boulder detection -> binary obstacle map creation -> erosion operation of binary map -> pathfinding using [Neural A*](https://omron-sinicx.github.io/neural-astar/)  -> Path overlay vizualization.
+- Image upload -> crater-boulder detection -> binary obstacle map creation -> erosion operation of binary map (to create a safe buffere space between rover path and the obstacles) -> pathfinding using [Neural A*](https://omron-sinicx.github.io/neural-astar/)  -> Path overlay vizualization.
 
 Why Neural A*?
 
