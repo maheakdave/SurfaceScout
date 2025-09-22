@@ -8,6 +8,8 @@ Run the api server using -> `python api.py` and then run the streamlit app by ru
 
 The algorithm is depicted as below:
 
+- Image upload -> crater-boulder detection -> binary obstacle map creation -> erosion operation of binary map -> pathfinding using [neural A*](https://omron-sinicx.github.io/neural-astar/) -> Path overlay vizualization.
+
 ![Explaination page 1](assets/Roverexp_1.png)
 
 ![Explaination page 2](assets/Roverexp_2.png)
